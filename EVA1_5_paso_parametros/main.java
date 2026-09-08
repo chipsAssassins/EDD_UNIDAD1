@@ -6,10 +6,21 @@ public class main {
         System.out.println("valor de i = "+ i );
         incrementar(i);
         System.err.println("Valor de i (despues de incrementar) = "+i);
+        //Ahora paso por referencia
+        Prueba prueba = new Prueba();
+        System.out.println("valor de prueba.y = " + prueba.y);
+        incrementarObj(prueba);
+        System.err.println("Valor de prueba.y (despues de incrementar) = " + prueba.y);
 
     }
 
     public static void incrementar (int valor){
         valor ++ ;
     }
+    public static void incrementarObj(Prueba objeto){
+        objeto.y++;
+    }
 }
+    class Prueba{
+        int y =5;
+    }
